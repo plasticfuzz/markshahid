@@ -1,0 +1,272 @@
+/*  
+Theme Name: Root Landscapes
+Theme URI: http://www.gregponchak.com/
+Description: Based on a skeleton by Greg Ponchak, this them was built by MSM New Media Design exclusively for Root Landscapes.
+Version: 1.0
+Author: Mark Shahid
+Author URI: http://markshahid.co.uk/
+*/
+	
+
+	/*Basic Setup*/
+	#container {wi/dth:960px; ma/rgin:0 auto;padd/ing:50px 0; position:absolute;left:50%; margin:0 0 0 -480px; width:960px;}
+	* { color:#333;font-family:gill sans mt, helvetica, arial, sans-serif;font-size:12px;line-height:18px;list-style:none;margin:0;padding:0;text-decoration:none; }
+	a { color: #390; }
+	a:hover { color: #666; }
+	body { background:#fff;}
+	h1, h1 a { fon/t/-size:24px;li/ne-height:24px; }
+	h2, h2 a { font-size:18px;line-height:50px; color:#360; letter-spacing: 3px; }
+	h3, h3 a { font-size:12px;line-height:18px; }
+	h4, h4 a { font-size:16px;line-height:16px; }
+	h5, h5 a { font-size:16px;line-height:14px; pad/ding-bottom: 20px; display: none;}
+	h1 a, h2 a, h3 a, h4 a, h5 a { color:#390; }
+	p { padding:10px; }
+	
+	/*Basic page setup*/
+	
+	.center { float:left;height:1px;width:4%; }
+	.clear { clear:both; }	
+	.half {float:left; width:400px; pa/dding:400px 0px 40px 0px;}
+	.italics, .italics a { font-style:italic; }
+	.serif, .serif a { font-family: gill sans mt, helvetica, arial, sans-serif; }
+	
+	/*Top setup*/
+	
+	#header	{padding: 50px 40px; float:left; }
+	#header a { color:#333; font-size:30px; line-h/eight:30px;  }
+	#header a:hover { background: transparent; }
+	.pad { padding-top: 5px; }
+	.right {float:right; display:inline; posi/tion: relative;}
+	#pages li { display:inline; }
+	#pages li a { display:block;float:left;padding:0 10px 0 0; }
+	#top { display:block;padding:80px 0 100px; background: url(gallery/header_pics.png) right no-repeat; }
+	
+	/*Posts*/
+	
+	.info { text-transform:uppercase; }
+	.post { overflow:hidden; width: 80%; padding:0 0 0 30px; border: none; }	
+	.post h2 a { font-size:16px; }
+	#box {background: #900; width: 200px; height: 100px;}
+	
+	/*Categories*/
+	
+	
+	.black ul { padding-bottom: 20px; width:500px; }
+	.black ul li { display:inline;  }
+	.black ul li a, .black a { color:#fff;display:block;padding:3px 3px;border-bottom:1px solid #ccc;  background: url(gallery/menu_bg.png) repeat-y;}
+	.black ul li a:hover, .black a:hover { background: #030; color: #fff;}
+	
+	
+	/*Comments*/
+	
+	.commentlist li { padding:5px; }
+	.commentlist li.alt { background:#eee; }
+	.commentlist li a { color:#333; }
+	input { display:block; }
+	
+	
+		/*jQuery Nav*/
+	
+	
+	#dropmenu, #dropmenu ul {margin:0; padding:0; list-style-type:none; list-style-position: outside; position:absolute; line-height:1.5em; z-in/dex:10; width:960px; background: #360; letter-spacing: 0.1em; font-weight:bold; background: url(http://www.markshahid.co.uk/testusers/root/wp-content/gallery/menu_bg.png) right no-repeat; } 
+	#dropmenu a {font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; font-size: 12px; text-transform: lowercase; lett/er-spacing: 2px; display:block; padding:0.75em 1em; color:#fff; borde/r-right:1px solid #ccc; text-decoration:none; background:#360;} 
+	#dropmenu a:hover {background:#030; color: #fff} 
+	#dropmenu li {float:left; position:relative;} 
+	#dropmenu ul {position:absolute; display:none; width:12em; top:6em; left:-1px;  } 
+	#dropmenu ul a {bor/der-left:1px solid #060;} 
+	#dropmenu li ul { bor/der-top:1px solid #060; wid/th:24.1em; font-size: 6px;} 
+	#dropmenu li ul a {width:12em; height:auto; float:	left; background: #360;  bor/der-bottom:1px solid #c8c8c8;} 
+	#dropmenu ul ul {top:auto;} 
+	#dropmenu li ul ul {left:12em; margin:0px 0 0 10px;} 
+	#dropmenu li:hover ul ul, #dropmenu li:hover ul ul ul, #dropmenu li:hover ul ul ul ul {display:none;} 
+	#dropmenu li:hover ul, #dropmenu li li:hover ul, #dropmenu li li li:hover ul, #dropmenu li li li li:hover ul {display:block;} 
+
+
+
+
+	/*Footer*/
+
+	#footer { clear: both; padding: 15px 0 15px 0;  font-size: 11px; border-top: 1px solid #ccc;  }
+	#footer .copyright { float: left;font-family:gill sans mt, helvetica, arial, sans-serif; color: #666;}
+	#footer .copyright a {color: #666;}
+	#footer .copyright a:hover {text-decoration: underline;}
+	#footer .address { clear: both;  float: left;font-family:gill sans mt, helvetica, arial, sans-serif; color: #ccc; width: 400px; padding:10px 10px;}
+	#footer .address a {color: #ccc;}
+	#footer .address a:hover {color: #666;}
+	#footer .design a:hover { color:#666;}
+	#footer .design {font-fami/ly: "Palatino Linotype", "Book Antiqua", Palatino, serif; float: right; }
+	#footer .design a { color:#ccc; }
+	#footer .design a:hover { color:#ccc;}
+	
+	
+	/*Accordion*/
+	
+	.accordion {
+		wid/th: 480px;
+		bor/der-bottom: solid 1px #c4c4c4;
+	}
+	.accordion h3 {
+		background: url(gallery/arrow3.png) top left no-repeat;
+		color: #060;
+		padding: 7px 15px;
+		margin: 0;
+		fo/nt: bold 120%/100% Arial, Helvetica, sans-serif;
+		bo/rder: solid 1px #c4c4c4;
+		border-bottom: none;
+		cursor: pointer;
+	}
+	.accordion h3:hover {
+		color: #360;
+		
+	}
+	.accordion h3.active {
+		background-position:left -40px;
+	}
+	.accordion p {
+		backgro/und: #f7f7f7;
+		margin: 0;
+		padding: 10px 15px 20px;
+		
+	
+	}
+	
+	
+	/*Portfolio Slider*/
+
+		
+	.greyto/pbar {
+	border-top:#575757 10px solid;
+	}
+	
+	.smalltoppad{
+	padding-top:10px;
+	}
+	
+	
+	#myController div{
+	font-family:minion pro, times, georgia, serif;
+	font-size:1.2em;
+	font-weight:bold;
+	text-transform:capitalize;
+	color:#000;
+	background:#fff;
+	cursor:pointer;
+	height:300px;
+	padding:10px;
+	
+	}
+	
+	
+	#myController {
+	float:right;
+	width:120px;
+	display:none;
+	}
+	
+	#myController div.jFlowSelected {
+	background:#ccc;
+	}
+	
+
+	
+	#mySlides a {
+		
+	color:#FFFFFF;
+	}
+	
+	.jFlowControl a {
+	color:#fff;
+	cursor:pointer;
+	}
+	.jFlowControl a:hover {
+	color:#fff;
+	tex/t-decoration:none;
+	}
+	
+	#jFlowSlide{
+	border:none;
+	margin:auto;
+	
+	}
+	
+	#jF/lowSlide img{
+	width:500px;
+	}
+
+	.boxgrid{ 
+	width: 500px; 
+	height: 280px; 
+	margin:0px 0 0px 0; 
+	float:left; 
+	background:#161613; 
+	overflow: hidden; 
+	position: relative; 
+	}
+	.boxgrid img{ 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	border: 0; 
+	}
+				
+	.boxgrid h3 a, .boxgrid h3, .boxgridsmall h3, .boxgridsmall h3 a, .boxgridsmall a {
+	color:#fff;
+	font-style:normal;
+	font-weight:normal;
+	border-bottom:none;
+	}
+	.boxgrid h3 {
+	font-size:1.7em;
+	letter-spacing:0.02em;
+	font-family: minion pro, minion, times, georgia, helvetica, arial, sans-serif;
+	padding:3px 0 0 20px;
+	}
+
+	.caption .boxcaption {
+ 	top: 230px;     /* -----make this the same as the 'top' value for rollout on boxgrid.js */
+ 	left: 0px;
+ 	}
+				
+				
+	.cover{
+	display:block;
+	}
+
+	.cover h4 {
+	padding:5px 10px;
+	font-size:1em;
+	text-transform:uppercase;
+	letter-spacing:0.08em;
+	}
+
+
+	.boxcaption{ 
+	float: left; 
+	position: absolute; 
+	background: #360; 
+	height: 400px; 
+	width: 100%; 
+	opacity: .9; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+ 	}
+			
+ 	.caption .boxcaption {
+ 	top: 230px;     /* -----make this the same as the 'top' value for rollout on boxgrid.js */
+ 	left: 0px;
+ 	}
+			
+	.slidertitle {
+	display:block;
+	font-size:1.5em;
+	tex/t-transform:uppercase;
+	padding:10px 15px;
+	color: #FFF;
+	}
+	.sliderexcerpt {
+	display:block;
+	padding:15px 15px;
+	color: #FFF;
+	}

@@ -1,0 +1,136 @@
+<html>
+<head>
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Table Rows Demo</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+
+
+	
+	<style type="text/css">
+		
+		table {
+			width: 500px;
+			border-collapse: collapse;
+			
+			-webkit-box-shadow: 0px 1px 1px rgba(0,0,0,.25);
+		}
+		
+		td, th {
+			padding: 5px 10px;
+		}
+		
+		thead th {
+			background: #110303; /* Old browsers */
+			background: -moz-linear-gradient(top, #110303 0%, #333333 98%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#110303), color-stop(98%,#333333)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, #110303 0%,#333333 98%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, #110303 0%,#333333 98%); /* Opera11.10+ */
+			background: -ms-linear-gradient(top, #110303 0%,#333333 98%); /* IE10+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#110303', endColorstr='#333333',GradientType=0 ); /* IE6-9 */
+			background: linear-gradient(top, #110303 0%,#333333 98%); /* W3C */
+			
+			color: #fff;
+		}
+		
+		tbody tr {
+			border-top: 1px dotted #D8D5D5;
+		}
+		
+		tbody td {
+			border: 1px dotted #D8D5D5;
+			border-width: 0px 1px;
+			
+			-webkit-transition: background-color .2s linear;
+			-moz-transition: background-color .2s linear;
+			transition: background-color .2s linear;
+		}
+		
+		tbody tr:first-child {
+			border-top: none;
+		}
+		
+		tbody tr.even td {
+			background: #fbfbfb;
+		}
+		
+		tbody tr.clickable:hover td {
+			background: #ecf2fa;
+			cursor: pointer;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div id="main" role="main">
+			<h1>Clickable Table Rows Demo</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Col 1</th>
+						<th>Col 2</th>
+						<th>Col 3</th>
+						<th>Col 4</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-href="http://google.com">
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td><a href="#">Edit</a> <a href="#">Delete</a></td>
+					</tr>
+					<tr class="even" data-href="http://google.com">
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td><a href="#">Edit</a> <a href="#">Delete</a></td>
+					</tr>
+					<tr data-href="http://google.com">
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td><a href="#">Edit</a> <a href="#">Delete</a></td>
+					</tr>
+					<tr class="even" data-href="http://google.com">
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td>text</td>
+						<td><a href="#">Edit</a> <a href="#">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		jQuery( function($) {
+			$('tbody tr[data-href]').addClass('clickable').click( function() {
+				window.location = $(this).attr('data-href');
+			}).find('a').hover( function() {
+				$(this).parents('tr').unbind('click');
+			}, function() {
+				$(this).parents('tr').click( function() {
+					window.location = $(this).attr('data-href');
+				});
+			});
+		});
+	</script>
+
+</body>
+</html>

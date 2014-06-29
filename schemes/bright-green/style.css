@@ -1,0 +1,181 @@
+/*   
+Theme Name: Stuff
+Scheme Name: Bright Green
+*/
+
+/* =Backgrounds
+----------------------------------------------------------------------------- */
+body,
+#menu,
+#menu > .mask > div {
+  backg/round-image: url(images/background.jpg);
+  background-color: #88bb00;
+}
+#scheme-switcher {
+  background-image: url(images/schemes-background.png);
+}
+#logo.arrow,
+#logo.arrow > .mask {
+  background-image: url(images/title-arrow.png);
+}
+#nav-menu li {
+  background-image: url(images/nav-menu-separator.png);
+}
+#nav-menu li.search div,
+#image-preloader .search-background {
+  background-image: url(images/search-background.png);
+}
+#nav-menu li.search input[type="submit"],
+#image-preloader .search-submit {
+  background-image: url(images/search-submit.png);
+}
+#nav-menu .arrow,
+#nav-menu .arrow > div {
+  background-image: url(images/nav-menu-arrow.png);
+}
+#loader,
+#image-preloader .loader {
+  background-image: url(images/loader.gif);
+}
+.box,
+.box .container,
+.box .title,
+.box .top,
+.box .bottom {
+  background-image: url(images/box-background.png);
+}
+.box .excerpt .mask {
+  background-image: url(images/excerpt-mask.png);
+}
+.box .more {
+  background-image: url(images/more-background.png);
+}
+.box ul {
+  list-style-image: url(images/list-arrow.png);
+}
+.comment div {
+  background-image: url(images/comment.png);  
+}
+.nivo-directionNav a {
+  background-image: url(images/arrow.png);
+}
+form .submit,
+form .submit > a {
+  background-image: url(images/submit.png);
+}
+form.contact .loader {
+  background-image: url(images/contact-loader.gif);
+}
+form .input {
+  background-image: url(images/input.png);
+}
+form .textarea {
+  background-image: url(images/textarea.png);
+}
+
+/* =Colors
+----------------------------------------------------------------------------- */
+body,
+#menu {
+  background-color: #fff;
+}
+#menu {
+  background-color: #000;
+  opacity: 0.93;
+}
+body {
+  color: #393939;
+}
+a {
+  color: #8ac318;
+}
+#nav-menu li a {
+  color: #3a9900;
+  font:normal 16px Georgia, sans-serif;
+  text-transform:capitalize;
+  
+ 
+}
+#nav-menu li a:hover,
+#nav-menu li.current a,
+#nav-menu li a.current {
+   text-decoration: underline;
+    color: #3a9900;
+
+}
+.box .title h2,
+.box h1 a, .box h2 a, .box h3 a,
+.box h4 a, .box h5 a, .box h6 a {
+  color: #23422f;
+}
+.box h1 a:hover, .box h2 a:hover, .box h3 a:hover,
+.box h4 a:hover, .box h5 a:hover, .box h6 a:hover {
+  color: #8ac318;
+}
+.box .meta p,
+.box .meta p a {
+  color: #515151;
+}
+.box .meta p a:hover{
+  color: #9b9b9b;
+}
+.box .title h2 span,
+.box .meta p.comments-count,
+.box .meta p.comments-count a,
+.box .meta p.website,
+.box .meta p.website a,
+.box .nav-page a.current,
+.box h1, .box h2, .box h3,
+.box h4, .box h5, .box h6,
+.highlight {
+  color: #8ac318;
+}
+.box .meta p.comments-count a:hover,
+.box .meta p.website a:hover {
+  color: #18b232;
+}
+.box .meta p.author a {
+  color: #000;
+}
+
+.box .thumbnail.video {
+  background-color: #000;
+}
+.box .more {
+  border-color: #b9b9b9;
+  color: #049128;
+}
+.box .more:hover {
+  color: #049128;
+}
+.box th {
+  background-color: #FFF;
+}
+.box td {
+  background-color:none;
+}
+.box ul {
+  list-style-image: url(images/list-arrow.png);
+}
+.box td li {
+  list-style-image: url(images/list-tick.png); margin-left: -5px!important;
+}
+
+.box img, blockquote, pre {
+  border-color: #c1c1c1;
+}
+.box hr {
+  border-color: #a0c76a;
+}
+.comment .timestamp {
+  color: #5a5a5a;
+}
+.comment-form p.input {
+  color: #a0c76a;
+}
+form p, input, textarea {
+  color: #690;
+}
+form .submit {
+  color: #049128;
+}

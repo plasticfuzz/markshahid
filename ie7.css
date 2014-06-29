@@ -1,0 +1,39 @@
+/*   
+Theme Name: Stuff
+*/
+
+/* =Social media
+----------------------------------------------------------------------------- */
+#social-media .schemes li {
+  width: 200px;
+}
+
+/* =Navigation menu
+----------------------------------------------------------------------------- */
+.cufon #nav-menu li {
+  padding-top: 8px;
+  height: 30px;
+}
+
+/* =Box
+----------------------------------------------------------------------------- */
+.cufon .box .more {
+  padding-top: 2px; 
+  height: 18px;
+}
+
+/* =Comments
+----------------------------------------------------------------------------- */
+.comment .top {
+  margin-bottom: -3px;
+}
+.comment-form input {
+  background-position: 100% -22px;
+}
+
+/* =Classes
+----------------------------------------------------------------------------- */
+.cufon form .submit {
+  padding-top: 3px;
+  height: 26px;
+}

@@ -1,0 +1,1443 @@
+/*   
+Theme Name: Stuff
+Theme URI: http://themes.kubasto.com/template/stuff/
+Description: Horizontal designed website template for portfolios and blogs.
+Author: Kuba Sto
+Author URI: http://themes.kubasto.com
+Version: 2.0
+*/
+
+/* =Reset default browser CSS.
+    Based on work by Eric Meyer:
+      http://meyerweb.com/eric/tools/css/reset/index.html
+----------------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+
+/* =Global
+----------------------------------------------------------------------------- */
+html {
+  height: 100%;
+  overflow: scroll;
+  overflow-y: hidden;
+}
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font: normal 11px/19px Verdana;
+  height: 100%;
+}
+p, blockquote, pre {
+  margin-top: 10px;
+}
+p:first-child, blockquote:first-child, pre:first-child {
+  margin-top: 0;
+}
+a {
+  outline: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* =Image preloader
+----------------------------------------------------------------------------- */
+#image-preloader > div {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+}
+
+/* =Browser notification
+----------------------------------------------------------------------------- */
+.browser-notification {
+  border-color: #a29330;
+  border-style: solid;
+  background: #fdf2ab url(images/exclamation.gif) no-repeat 10px center;
+  line-height: 18px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.browser-notification.ie6 {
+  border-bottom-width: 1px;
+  display: none;
+  top: 0;
+}
+.browser-notification.js {
+  border-top-width: 1px;
+  bottom: 0;
+}
+.browser-notification .text {
+  padding: 10px 36px 12px;
+}
+.browser-notification a {
+  color: #e25600;
+}
+.browser-notification .close {
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 14px;
+  top: 10px;
+}
+
+/* =Scheme switcher
+----------------------------------------------------------------------------- */
+#scheme-switcher {
+  background-position: center bottom;
+  position: fixed;
+  padding: 4px 8px;
+  left: 5px;
+  top: -120px;
+  width: 84px;
+  height: 146px;
+  z-index: 100;
+}
+#scheme-switcher .schemes li {
+  float: left;
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+}
+#scheme-switcher .schemes a {
+  background-image: url(images/schemes.png);
+  display: block;
+  height: 100%;
+}
+#scheme-switcher .select {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  margin-top: 8px;
+}
+.cufon #scheme-switcher .select {
+  font-size: 20px;
+  line-height: 0;
+  letter-spacing: 0;
+  top: 3px;
+}
+#scheme-switcher .select:hover {
+  text-decoration: none;
+}
+
+/* =Menu
+----------------------------------------------------------------------------- */
+#menu {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 200px;
+  height: 100%;
+  z-index: 99;
+}
+#menu > .mask {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 10px;
+  height: 100%;
+}
+#menu > .mask > div {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  float: left;
+  width: 1px;
+  height: 100%;
+}
+#menu > .container {
+  position: absolute;
+  top: 250px;
+  bottom: 0;
+  width: 100%;
+}
+
+/* =Social media
+----------------------------------------------------------------------------- */
+#social-media {
+  position: absolute;
+  top: 20px;
+  right: 65px;
+  z-index: 100;
+}
+#social-media.bottom {
+  top: auto;
+  bottom: 15px;
+}
+#social-media li {
+  margin-bottom: 10px;
+  height: 22px;
+}
+#social-media a {
+  background-position: 0 -22px;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  float: right;
+  height: 22px;
+  overflow: hidden;
+}
+#social-media a img {
+  display: block;
+  position: relative;
+}
+#social-media .schemes {
+  height: 49px;
+  margin-bottom: 25px;
+}
+#social-media .schemes li {
+  float: right;
+  margin: 0 0 5px 10px;
+}
+
+/* =Logo
+----------------------------------------------------------------------------- */
+#logo {
+  margin-right: 10px;
+}
+#logo img {
+  position: relative;
+}
+#logo.standalone {
+  margin-right: 35px;  
+}
+#logo.standalone img {
+  display: block;
+  margin-left: auto;
+}
+#logo.arrow {
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: relative;
+  height: 120px;
+}
+#logo.arrow > .image {
+  text-align: right;
+  line-height: 83px;
+  position: absolute;
+  top: 18px;
+  right: 55px;
+  height: 83px;
+}
+#logo.arrow > .image img {
+  vertical-align: middle;
+  max-height: 100%;
+}
+#logo.arrow > .mask {
+  background-position: right bottom;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* =Navigation menu
+----------------------------------------------------------------------------- */
+#nav-menu {
+  position: relative;
+  margin: 24px 35px 0 0;
+  height: 100%;
+}
+#nav-menu .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#nav-menu .arrow {
+  background-repeat: none;
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 30px;
+  width: 27px;
+  height: 10px;
+}
+#nav-menu .arrow.up {
+  background-position: left top;
+  top: -15px; /* -10px-5px */
+}
+#nav-menu .arrow.down {
+  background-position: left bottom;
+  bottom: -17px; /* -12px-5px */
+}
+#nav-menu .arrow > div {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#nav-menu .arrow.up > div {
+  background-position: right top;
+}
+#nav-menu .arrow.down > div {
+  background-position: right bottom;
+}
+#nav-menu ul {
+  position: absolute;
+  right: 0;
+  top: -8px; /* -3px-5px */
+  width: 100%;
+}
+#nav-menu li {
+  background-repeat: no-repeat;
+  background-position: right top;
+  font: bold 20px/35px Arial;
+  text-transform: uppercase;
+  text-align: right;
+  letter-spacing: -1px;
+  white-space: nowrap;
+  padding: 3px 30px 0;
+  height: 35px;
+}
+#nav-menu li:first-child {
+  background-image: none;
+}
+.cufon #nav-menu li {
+  font-size: 28px;
+  line-height: 0;
+  letter-spacing: 0;
+  padding-top: 10px;
+  height: 28px;
+}
+#nav-menu li a {
+  text-decoration: none;
+}
+#nav-menu li.search {
+  position: relative;
+}
+#nav-menu li.search div {
+  background-repeat: no-repeat;
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 19px;
+  width: 121px;
+  height: 25px;
+}
+#nav-menu li.search input {
+  background: none;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+#nav-menu li.search input[type="text"] {
+  line-height: 17px;
+  left: 8px;
+  top: 4px;
+  width: 90px;
+  height: 17px;
+}
+#nav-menu li.search input[type="submit"] {
+  background-position: left top;
+  cursor: pointer;
+  left: auto;
+  right: 5px;
+  top: 8px;
+  width: 9px;
+  height: 10px;
+}
+#nav-menu li.search input[type="submit"]:hover {
+  background-position: left bottom;
+}
+
+/* =Content
+----------------------------------------------------------------------------- */
+#content {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+/* =Loader
+----------------------------------------------------------------------------- */
+#loader {
+  background-repeat: no-repeat;
+  display: none;
+  position: fixed;
+  right: 20px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  z-index: 99;
+}
+
+/* =Box
+----------------------------------------------------------------------------- */
+
+/* --Structure
+----------------------------------------------------------------------------- */
+.box {
+  float: left;
+  margin-right: -10px;
+  width: 260px;
+  height: 100%;
+}
+.box .container {
+  background-position: -260px 0;
+  position: relative;
+  margin-top: 231px;
+  padding: 10px 20px;
+}
+.box .top,
+.box .bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10px;
+}
+.box .top {
+  background-position: -520px 0;
+  top: -10px;
+}
+.box .bottom {
+  background-position: -780px 0;
+  bottom: -10px;
+}
+
+/* --Title & meta
+----------------------------------------------------------------------------- */
+.box .title,
+.box .meta {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 220px;
+}
+.box .title a,
+.box .meta a {
+  text-decoration: none;
+}
+.box .title {
+  background-position: -260px 0;
+  padding: 4px 20px 0;
+}
+.box .title h2 {
+  margin: 0 !important;
+  top: 4px;
+}
+.cufon .box .title h2 {
+  margin: 0 !important;
+  top: 6px;
+}
+.box .meta {
+  padding: 0 20px 6px;
+}
+.box .meta p {
+  font: italic 12px/17px Georgia, Garamond;
+  text-align: right;
+  margin: 0;
+}
+.box .meta p.comments-count span {
+  font-size: 18px;
+}
+.box .meta p.author a:hover {
+  color: inherit;
+}
+
+/* --Thumbnail
+----------------------------------------------------------------------------- */
+.box .thumbnail {
+  position: relative;
+  width: 220px;
+  height: 138px;
+}
+.box .thumbnail > a,
+.box .thumbnail > img,
+.box .thumbnail > a > img {
+  border: 0;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.box .thumbnail.gallery .sub-gallery {
+  display: none;
+}
+.box .badge {
+  background: url(images/badge.png) no-repeat 0 44px;
+  display: block;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  width: 44px;
+  height: 44px;
+}
+.box .badge.hot {
+  background-position: 0 0;
+}
+.box .badge.new {
+  background-position: 0 -44px;
+}
+.box .badge.cool {
+  background-position: 0 -88px;
+}
+.box .badge.buy {
+  background-position: 0 -132px;
+}
+.box .badge.video {
+  background-position: 0 -176px;
+} 
+
+/* --Excerpt & content
+----------------------------------------------------------------------------- */
+.box .excerpt,
+.box .content {
+  margin-top: 4px;
+}
+.box .excerpt {
+  position: relative;
+  overflow: hidden;
+}
+.box .excerpt .mask {
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  text-align: right;
+  line-height: 10px;
+  position: absolute;
+  padding-top: 45px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+}
+.box .content {
+  clear: both;
+  position: relative;
+  overflow: hidden;
+}
+.box .excerpt > *,
+.box .content > * {
+  margin-top: 10px;
+}
+.box .excerpt > *:first-child,
+.box .content > *:first-child {
+  margin-top: 0;
+}
+.box .title + .excerpt {
+  margin-top: 0;
+}
+.box .excerpt + .content {
+  margin-top: 10px;
+}
+
+/* --Page navigation
+----------------------------------------------------------------------------- */
+.box .nav-page {
+  font: normal 10px/14px Arial;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 10px;
+  visibility: hidden;
+}
+.box .nav-page > a {
+  padding: 0 15px;
+}
+.box .nav-page .pages a {
+  padding: 0 3px;
+}
+.box .nav-page a.current {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: default;
+  position: relative;
+  top: 2px;
+}
+
+/* --More
+----------------------------------------------------------------------------- */
+.box .more {
+  border: 1px solid;
+  background-repeat: repeat-x;
+  font: bold 12px/20px Arial;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  position: absolute;  
+  padding: 0 4px; 
+  right: 20px;
+  bottom: -33px;
+  height: 20px;
+}
+.cufon .box .more {
+  font-size: 19px;
+  line-height: 0;
+  padding: 3px 3px 0 4px; 
+  height: 17px;
+}
+
+/* --Wide
+----------------------------------------------------------------------------- */
+.box.wide {
+  background-position: -1040px 0;
+  width: 740px;
+}
+.box.wide .container {
+  background-position: -1780px 0;
+  margin-top: 81px;
+}
+.box.wide .top {
+  background-position: -2520px 0;
+  top: -10px;
+}
+.box.wide .bottom {
+  background-position: -3260px 0;
+  bottom: -10px;
+}
+.box.wide .title,
+.box.wide .meta {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.box.wide .title {
+  background: none;
+  padding: 0;
+  width: auto;
+  z-index: 0;
+}
+.box.wide .title h2 {
+  top: 0;
+}
+.box.wide .meta {
+  float: right;
+  margin-left: 50px;
+  padding: 0;
+  width: auto;
+  z-index: 1;
+}
+.box.wide .thumbnail {
+  margin-bottom: 10px;
+  width: 700px;
+  height: 438px;
+  overflow: hidden;
+}
+
+/* --High
+----------------------------------------------------------------------------- */
+.box.high .container {
+  margin-top: 0 !important;
+}
+.box.high .title,
+.box.high .meta {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.box.high .title {
+  background: none;
+  padding: 0;
+}
+.box.high .title h2 {
+  top: 0;
+}
+.box.high .meta {
+  margin-bottom: 10px;
+  padding: 0;
+  width: auto;
+}
+.box.high .column {
+  margin-right: 20px;
+}
+.box.high .column > * {
+  margin-top: 10px;
+}
+.box.high .column > *:first-child {
+  margin-top: 0 !important;
+}
+
+/* --Wide high
+----------------------------------------------------------------------------- */
+.box.wide.high .meta {
+  margin-bottom: 20px;
+}
+
+/* --Styles
+----------------------------------------------------------------------------- */
+.box h1, .box h2, .box h3,
+.box h4, .box h5, .box h6 {
+  font-family: Arial;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 23px;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 14px !important;
+}
+.cufon .box h1, .cufon .box h2, .cufon .box h3,
+.cufon .box h4, .cufon .box h5, .cufon .box h6 {
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: 19px !important;
+}
+.box h1 a, .box h2 a, .box h3 a,
+.box h4 a, .box h5 a, .box h6 a {
+  text-decoration: none;
+}
+.box h1, .box h2, .box h3 {
+  font-size: 19px;
+}
+.cufon .box h1, .cufon .box h2, .cufon .box h3 {
+  font-size: 28px;
+}
+.box h4 {
+  font-size: 17px;
+}
+.cufon .box h4 {
+  font-size: 24px;
+}
+.box h5, .box h6 {
+  font-size: 14px;
+}
+.cufon .box h5, .cufon .box h6 {
+  font-size: 18px;
+}
+.box h1 + *, .box h2 + *, .box h3 + *,
+.box h4 + *, .box h5 + *, .box h6 + * {
+  margin-top: 0 !important;
+}
+.box table {
+  border-collapse: separate;
+  border-spacing: 1px;
+  width: 100%;
+}
+.box th, .box td {
+  text-align: left;
+  padding: 5px 10px;
+}
+.box ul, ol {
+  list-style-position: outside;
+  padding-left: 25px;
+}
+.box ol {
+  list-style-type: decimal;
+}
+.box blockquote, .box pre {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  padding: 10px 20px;
+}
+.box img {
+  border: 1px solid;
+  display: block;
+}
+.box blockquote {
+  border-style: solid;
+  font-style: italic;
+}
+.box pre {
+  border-style: dotted;
+  line-height: 16px;
+  overflow: auto;
+}
+.box hr {
+  border: 0;
+  border-top: 1px dotted;
+  height: 1px;
+}
+
+/* =Comments
+----------------------------------------------------------------------------- */
+#comments {
+  position: absolute;
+  padding: 0 24px 0 12px;
+  left: 100%;
+  top: 15px;
+}
+#comments .column {
+  margin-left: 20px;
+}
+#comments .column:first-child {
+  margin-left: 0;
+}
+#comments .list {
+  width: 375px;
+}
+.comment.level-1 {
+  margin-left: 20px;
+}
+.comment.level-2 {
+  margin-left: 40px;
+}
+.comment.level-3 {
+  margin-left: 60px;
+}
+.comment.level-4 {
+  margin-left: 80px;
+}
+.comment.level-5 {
+  margin-left: 100px;
+}
+.comment > div {
+  position: relative;
+  margin-right: 96px;
+}
+.comment .top > div,
+.comment .bottom > div,
+.comment .meta {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 96px;
+  height: 100%;
+  overflow: hidden;
+}
+.comment .top,
+.comment .top > div,
+.comment .bottom,
+.comment .bottom > div {
+  height: 14px;
+}
+.comment .top {
+  background-position: -375px 0;
+}
+.comment .bottom {
+  background-position: -750px 0;
+}
+.comment .top > div {
+  background-position: -654px 0;
+}
+.comment .bottom > div {
+  background-position: -1029px 0;
+}
+.comment .middle {
+  padding: 0 12px 6px 20px; 
+}
+.comment .content {
+  background: none !important;
+  min-height: 98px;
+  overflow: auto;
+}
+.comment .content blockquote {
+  border-left-width: 1px;
+  border-left-style: dotted;
+  font-style: italic;
+  padding: 0 10px;
+}
+.comment .tools {
+  background-position: -8px 0;
+  background-repeat: repeat-y;
+  font-size: 9px;
+  line-height: 18px;
+  display: none;
+  position: absolute;
+  padding: 3px 6px;
+  right: 6px;
+  bottom: 3px;
+}
+.comment .meta {
+  background-position: -279px 0;
+  height: 100%;
+}
+.comment .meta > * {
+  display: block;
+  position: absolute;
+  margin: 0;
+  left: 12px;
+}
+.comment .avatar {
+  top: 2px;
+}
+.comment .author {
+  font-size: 12px;
+  line-height: 14px;
+  top: 2px;
+  width: 70px;
+  overflow: hidden;
+}
+.comment .avatar + .author {
+  top: 40px;
+}
+.comment .timestamp {
+  font-size: 10px;
+  line-height: 12px;
+  bottom: 10px;
+}
+.comment-form {
+  margin-top: 22px;
+  padding-left: 8px;
+}
+.comment-form:first-child {
+  margin-top: 4px;
+}
+.comment-form p, h4 {
+  color: inherit;
+}
+.comment-form h4 {
+  font: bold 12px/22px Arial;
+  text-transform: uppercase;
+}
+.cufon .comment-form h4 {
+  font-size: 16px;
+}
+.comment-form .msg {
+  margin-top: 0;
+}
+.comment-form form .input,
+.comment-form form .textarea {
+  background-position: left bottom;
+  margin-left: -1px;
+}
+.comment-form form .input:first-child {
+  margin-top: 5px;
+}
+.comment-form form .submit {
+  background-position: 0 -58px;
+}
+.comment-form form .submit > a {
+  background-position: right -87px;
+}
+
+/* =Contact form
+----------------------------------------------------------------------------- */
+form.contact {
+  margin-top: 30px !important;
+  width: 360px;
+}
+form.contact .loader,
+form.contact .status {
+  margin: 0 10px;
+  height: 29px;
+}
+form.contact .loader {
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: none;
+  float: right;
+  width: 16px;
+}
+form.contact .status {
+  line-height: 29px;
+  float: left;
+}
+
+/* =Contact Form 7
+----------------------------------------------------------------------------- */
+.wpcf7-response-output {
+  border: none !important;
+  line-height: 29px;
+  float: left;
+  margin: 0 10px !important;
+  padding: 0 !important;
+  height: 29px;
+}
+
+/* =Nivo Slider
+----------------------------------------------------------------------------- */
+.nivo-directionNav a {
+  display: block;
+  text-indent: -9999px;
+  top: 190px !important;
+  width: 58px;
+  height: 58px;
+}
+.nivo-prevNav {
+  background-position: 0 0;
+  left: 5px !important;
+}
+.nivo-nextNav {
+  background-position: 0 -58px;
+  right: 5px !important;
+}
+
+/* =Image caption
+----------------------------------------------------------------------------- */
+.image-caption {
+  font-size: 9px;
+  font-style: italic;
+  line-height: 11px;
+  margin-top: 3px !important;
+}
+
+/* =Form
+----------------------------------------------------------------------------- */
+form .input,
+form .textarea {
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 7px;
+}
+form .input {
+  font: bold 12px/22px Arial;
+  text-transform: uppercase;
+  padding-left: 148px;
+  height: 22px;
+}
+.cufon form .input {
+  font-size: 16px;
+}
+form .textarea {
+  height: 115px;
+}
+form .submit {
+  font: bold 16px/29px Arial;
+  text-transform: uppercase;
+  position: relative;
+  float: left;
+  margin-right: 3px;
+  padding: 0 4px 0 7px;
+  height: 29px;
+}
+.cufon form .submit {
+  font-size: 22px;
+  line-height: 0;
+  padding: 5px 4px 0 7px;
+  height: 24px;
+}
+form .submit > a {
+  background-position: right -29px;
+  position: absolute;
+  padding-right: 3px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+form .submit.disabled a {
+  cursor: default;
+}
+input, textarea {
+  border: 0;
+  background-color: transparent;
+  font: normal 11px/16px Verdana;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 5px;
+}
+input {
+  top: 3px;
+  width: 131px;
+  height: 16px;
+}
+textarea {
+  top: 5px;
+  width: 350px;
+  height: 105px;
+  overflow: auto;
+}
+
+/* =Classes
+----------------------------------------------------------------------------- */
+.clear {
+  clear: both;
+  height: 0;
+}
+.highlight {
+  font-weight: bold;
+}
+.aligncenter {
+  margin: 0 auto;
+}
+.alignleft,
+.alignright {
+  position: relative;
+  top: 6px;
+}
+.alignleft {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.alignright {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+/* =WordPress
+----------------------------------------------------------------------------- */
+.gallery .gallery-icon img {
+  border-width: 1px !important;
+  margin: 0 auto;
+}
+.gallery .gallery-caption {
+  font-style: italic;
+}
+
+/* =Nivo Slider 2.1
+----------------------------------------------------------------------------- */
+.nivoSlider {
+  position:relative;
+}
+.nivoSlider img {
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+.nivoSlider a.nivo-imageLink {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  border:0;
+  padding:0;
+  margin:0;
+  z-index:60;
+  display:none;
+}
+.nivo-slice {
+  display:block;
+  position:absolute;
+  z-index:50;
+  height:100%;
+}
+/* Caption styles */
+.nivo-caption {
+  position:absolute;
+  left:0px;
+  bottom:0px;
+  background:#000;
+  color:#fff;
+  opacity:0.8;
+  width:100%;
+  z-index:89;
+}
+.nivo-caption p {
+  padding:5px;
+  margin:0;
+}
+.nivo-caption a {
+  display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+.nivo-directionNav a {
+  position:absolute;
+  top:45%;
+  z-index:99;
+  cursor:pointer;
+}
+.nivo-prevNav {
+  left:0px;
+}
+.nivo-nextNav {
+  right:0px;
+}
+.nivo-controlNav a {
+  position:relative;
+  z-index:99;
+  cursor:pointer;
+}
+.nivo-controlNav a.active {
+  font-weight:bold;
+}
+
+/* =Fancybox 1.3.4
+----------------------------------------------------------------------------- */
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  margin-left: -20px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1104;
+  display: none;
+}
+#fancybox-loading div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 480px;
+  background-image: url('images/fancybox/fancybox.png');
+}
+#fancybox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  display: none;
+}
+#fancybox-tmp {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  overflow: auto;
+  display: none;
+}
+#fancybox-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 1101;
+  outline: none;
+  display: none;
+}
+#fancybox-outer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+#fancybox-content {
+  width: 0;
+  height: 0;
+  padding: 0;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1102;
+  border: 0px solid #fff;
+}
+#fancybox-hide-sel-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1101;
+}
+#fancybox-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background: transparent url('images/fancybox/fancybox.png') -40px 0px;
+  cursor: pointer;
+  z-index: 1103;
+  display: none;
+}
+#fancybox-error {
+  color: #444;
+  font: normal 12px/20px Arial;
+  padding: 14px;
+  margin: 0;
+}
+#fancybox-img {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  line-height: 0;
+  vertical-align: top;
+}
+#fancybox-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+#fancybox-left, #fancybox-right {
+  position: absolute;
+  bottom: 0px;
+  height: 100%;
+  width: 35%;
+  cursor: pointer;
+  outline: none;
+  background: transparent url('images/fancybox/blank.gif');
+  z-index: 1102;
+  display: none;
+}
+#fancybox-left {
+  left: 0px;
+}
+#fancybox-right {
+  right: 0px;
+}
+#fancybox-left-ico, #fancybox-right-ico {
+  position: absolute;
+  top: 50%;
+  left: -9999px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  cursor: pointer;
+  z-index: 1102;
+  display: block;
+}
+#fancybox-left-ico {
+  background-image: url('images/fancybox/fancybox.png');
+  background-position: -40px -30px;
+}
+#fancybox-right-ico {
+  background-image: url('images/fancybox/fancybox.png');
+  background-position: -40px -60px;
+}
+#fancybox-left:hover, #fancybox-right:hover {
+  visibility: visible; /* IE6 */
+}
+#fancybox-left:hover span {
+  left: 20px;
+}
+#fancybox-right:hover span {
+  left: auto;
+  right: 20px;
+}
+.fancybox-bg {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 1001;
+}
+#fancybox-bg-n {
+  top: -20px;
+  left: 0;
+  width: 100%;
+  background-image: url('images/fancybox/fancybox-x.png');
+}
+#fancybox-bg-ne {
+  top: -20px;
+  right: -20px;
+  background-image: url('images/fancybox/fancybox.png');
+  background-position: -40px -162px;
+}
+#fancybox-bg-e {
+  top: 0;
+  right: -20px;
+  height: 100%;
+  background-image: url('images/fancybox/fancybox-y.png');
+  background-position: -20px 0px;
+}
+#fancybox-bg-se {
+  bottom: -20px;
+  right: -20px;
+  background-image: url('images/fancybox/fancybox.png');
+  background-position: -40px -182px; 
+}
+#fancybox-bg-s {
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  background-image: url('images/fancybox/fancybox-x.png');
+  background-position: 0px -20px;
+}
+#fancybox-bg-sw {
+  bottom: -20px;
+  left: -20px;
+  background-image: url('images/fancybox/fancybox.png');
+  background-position: -40px -142px;
+}
+#fancybox-bg-w {
+  top: 0;
+  left: -20px;
+  height: 100%;
+  background-image: url('images/fancybox/fancybox-y.png');
+}
+#fancybox-bg-nw {
+  top: -20px;
+  left: -20px;
+  background-image: url('images/fancybox/fancybox.png');
+  background-position: -40px -122px;
+}
+#fancybox-title {
+  font-family: Helvetica;
+  font-size: 12px;
+  z-index: 1102;
+}
+.fancybox-title-inside {
+  padding-bottom: 10px;
+  text-align: center;
+  color: #333;
+  background: #fff;
+  position: relative;
+}
+.fancybox-title-outside {
+  padding-top: 10px;
+  color: #fff;
+}
+.fancybox-title-over {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #FFF;
+  text-align: left;
+}
+#fancybox-title-over {
+  padding: 10px;
+  background-image: url('images/fancybox/fancy_title_over.png');
+  display: block;
+}
+.fancybox-title-float {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  height: 32px;
+}
+#fancybox-title-float-wrap {
+  border: none;
+  border-collapse: collapse;
+  width: auto;
+}
+#fancybox-title-float-wrap td {
+  border: none;
+  white-space: nowrap;
+}
+#fancybox-title-float-left {
+  padding: 0 0 0 15px;
+  background: url('images/fancybox/fancybox.png') -40px -90px no-repeat;
+}
+#fancybox-title-float-main {
+  color: #FFF;
+  line-height: 29px;
+  font-weight: bold;
+  padding: 0 0 3px 0;
+  background: url('images/fancybox/fancybox-x.png') 0px -40px;
+}
+#fancybox-title-float-right {
+  padding: 0 0 0 15px;
+  background: url('images/fancybox/fancybox.png') -55px -90px no-repeat;
+}
+.fancybox-ie .fancybox-bg { background: transparent !important; }
+.fancybox-ie #fancybox-bg-n { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_n.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-ne { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_ne.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-e { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_e.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-se { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_se.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-s { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_s.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-sw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_sw.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-w { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_w.png', sizingMethod='scale'); }
+.fancybox-ie #fancybox-bg-nw { filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='fancybox/fancy_shadow_nw.png', sizingMethod='scale'); }

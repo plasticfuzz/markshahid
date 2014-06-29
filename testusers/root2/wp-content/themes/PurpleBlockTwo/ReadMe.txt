@@ -1,0 +1,3 @@
+This Wordpress theme and all of it's files, including, but no limited to the php, css, and html files are copyrighted by Greg Ponchak. You may not resell or redistribute these files. You may, however modify these files for your own personal use and install them on your own personal server for single user use. 
+
+If you would like to make these files available for multiple users, please contact me via gregponchak@gmail.com to work out licensing details.
